@@ -20,7 +20,7 @@ Node* createNode(int key) {
 
 // Fonction pour insérer un élément dans l'arbre binaire de recherche
 void insert(Node** root, int key) {
-    Node* current = *root;
+    Node* current = *root ;
     Node* parent = NULL;
 
     while (current != NULL) {
