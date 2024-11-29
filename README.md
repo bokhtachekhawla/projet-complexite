@@ -47,28 +47,42 @@ Ce projet inclut :
    ```bash
    cd projet-complexite
 
-## **Comment Exécuter le Code**
+# Comment Exécuter le Code
 
-### 1. Installez le compilateur GCC :
-    - Assurez-vous que GCC est installé en exécutant la commande suivante :
+### 1. Installer le Compilateur GCC :
+   - Assurez-vous que **GCC** est installé sur votre machine. Si ce n’est pas déjà fait, vous pouvez installer GCC via le gestionnaire de paquets de votre système.
+   - Pour vérifier si GCC est installé, exécutez la commande suivante :
      ```bash
-     git --version
+     gcc --version
      ```
 
-### 2. Compilez un fichier :
-    - Par exemple, pour compiler le code de liste doublement chainée, exécutez : :
+   Si la commande retourne une version, GCC est installé. Sinon, vous devrez l'installer avant de continuer.
+
+### 2. Compiler le Fichier C :
+   - Pour compiler un fichier source C (par exemple, `listedc.c`), utilisez la commande suivante :
      ```bash
      gcc listedc.c -o listedc
      ```
+     Cela créera un exécutable nommé `listedc`.
 
-### 3. Exécutez le programme compilé :
-    - Une fois le fichier compilé, exécutez le programme généré :
+### 3. Exécuter le Programme Compilé :
+   - Après la compilation, vous pouvez exécuter le programme compilé avec la commande suivante :
      ```bash
      ./listedc
      ```
 
-### 4. ERépétez pour d'autres fichiers :
-    - Utilisez les mêmes étapes pour compiler et exécuter d'autres fichiers .c
+### 4. Répéter pour D'autres Fichiers C :
+   - Pour compiler et exécuter d'autres fichiers source C, répétez les étapes ci-dessus avec le nom du fichier approprié :
+     - Compilation :
+       ```bash
+       gcc autre_fichier.c -o autre_programme
+       ```
+     - Exécution :
+       ```bash
+       ./autre_programme
+       ```
+
+
 
 ## **Description des Fichiers**
 
