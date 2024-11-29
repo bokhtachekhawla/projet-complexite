@@ -91,7 +91,7 @@ Ce projet inclut :
 | `TAS_complexite.c`              | Implémentation des tas avec analyse de complexité.         |
 | `TAS_exemple.c`                 | Exemple d’utilisation des tas.                             |
 | `Tri_par_TAS_complexite.c`      | Analyse du tri par tas avec complexité.                    |
-! `Tri_par_TAS_exemple.c`         | Exemple d’utilisation du tri basé sur les tas.             |
+| `Tri_par_TAS_exemple.c`         | Exemple d’utilisation du tri basé sur les tas.             |
 | `arbre_binaire_de_recherche.c`  | Implémentation des arbres binaires de recherche.           |
 | `arbre_b.c`                     | Implémentation des arbres B (B-Tree).                      |
 | `listedc.c`                     | Opérations sur les listes doublement chaînées.             |
