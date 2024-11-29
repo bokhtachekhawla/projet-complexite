@@ -40,9 +40,8 @@ Ce projet inclut :
 2. **Clonez le dépôt** :
    - Exécutez la commande suivante dans votre terminal :
      ```bash
-     git clone https://github.com/votre-utilisateur/projet-complexite.git
+     git clone https://github.com/bokhtachekhawla/projet-complexite.git
      ```
-     Remplacez `votre-utilisateur` par votre nom d'utilisateur GitHub si nécessaire.
 
 3. **Accédez au répertoire** :
    ```bash
@@ -51,28 +50,24 @@ Ce projet inclut :
 ## **Comment Exécuter le Code**
 
 ### 1. Installez le compilateur GCC :
-
     - Assurez-vous que GCC est installé en exécutant la commande suivante :
      ```bash
      git --version
      ```
 
 ### 2. Compilez un fichier :
-
     - Par exemple, pour compiler le code de liste doublement chainée, exécutez : :
      ```bash
      gcc listedc.c -o listedc
      ```
 
 ### 3. Exécutez le programme compilé :
-
     - Une fois le fichier compilé, exécutez le programme généré :
      ```bash
      ./listedc
      ```
 
 ### 4. ERépétez pour d'autres fichiers :
-
     - Utilisez les mêmes étapes pour compiler et exécuter d'autres fichiers .c
 
 ## **Description des Fichiers**
