@@ -56,23 +56,23 @@ void splitChild(struct BTreeNode* parent, int i, struct BTreeNode* fullChild) {
 
     struct BTreeNode* newChild = createNode(d, fullChild->leaf);
     newChild->n = d - 1;
-
-    for (int j = 0; j < d-1; j++)
+    int j;
+    for ( j = 0; j < d-1; j++)
         newChild->keys[j] = fullChild->keys[j + d];
 
     if (!fullChild->leaf) {
-        for (int j = 0; j < d; j++)
+        for ( j = 0; j < d; j++)
             newChild->C[j] = fullChild->C[j + d];
     }
 
     fullChild->n = d - 1;
 
-    for (int j = parent->n; j >= i+1; j--)
+    for ( j = parent->n; j >= i+1; j--)
         parent->C[j+1] = parent->C[j];
 
     parent->C[i+1] = newChild;
 
-    for (int j = parent->n-1; j >= i; j--)
+    for ( j = parent->n-1; j >= i; j--)
         parent->keys[j+1] = parent->keys[j];
 
     parent->keys[i] = fullChild->keys [d-1];
@@ -143,19 +143,19 @@ void merge(struct BTreeNode* node, int idx) {
     int d = node ->d;
 
     child->keys [d - 1] = node->keys[idx];
-
-    for (int i = 0; i < sibling->n; ++i)
+    int i;
+    for ( i = 0; i < sibling->n; ++i)
         child->keys[i + d] = sibling->keys[i];
 
     if (!child->leaf) {
-        for (int i = 0; i <= sibling->n; ++i)
+        for ( i = 0; i <= sibling->n; ++i)
             child->C[i + d] = sibling->C[i];
     }
 
-    for (int i = idx + 1; i < node->n; ++i)
+    for ( i = idx + 1; i < node->n; ++i)
         node->keys[i - 1] = node->keys[i];
 
-    for (int i = idx + 2; i <= node->n; ++i)
+    for ( i = idx + 2; i <= node->n; ++i)
         node->C[i - 1] = node->C[i];
 
     child->n += sibling->n + 1;
@@ -167,13 +167,14 @@ void merge(struct BTreeNode* node, int idx) {
 // Fonction principale pour supprimer une clé du B-tree
 void removeFromBTree(struct BTreeNode* node, int k) {
     int idx = 0;
+    int i;
     while (idx < node->n && node->keys[idx] < k)
         idx++;
 
     if (idx < node->n && node->keys[idx] == k) {
         // Si le nœud est une feuille
         if (node->leaf) {
-            for (int i = idx + 1; i < node->n; ++i)
+            for ( i = idx + 1; i < node->n; ++i)
                 node->keys[i - 1] = node->keys[i];
             node->n--;
         } else {
@@ -217,10 +218,10 @@ void removeFromBTree(struct BTreeNode* node, int k) {
 
 void freeTree(struct BTreeNode* node) {
     if (node == NULL) return; // Rien à libérer si le nœud est NULL
-
+    int i;
     // Si ce nœud n'est pas une feuille, libérer les sous-arbres enfants
     if (!node->leaf) {
-        for (int i = 0; i <= node->n; i++) { // Parcourt tous les enfants
+        for ( i = 0; i <= node->n; i++) { // Parcourt tous les enfants
             freeTree(node->C[i]); // Libère récursivement chaque sous-arbre
         }
     }
@@ -252,13 +253,13 @@ int main() {
     scanf("%d",&t);*/
     // Initialisation de la fréquence du compteur haute résolution
     QueryPerformanceFrequency(&frequency);
-
-    for (int trial = 0; trial < num_trials; trial++) {
+int trial,i;
+    for ( trial = 0; trial < num_trials; trial++) {
         struct BTreeNode* root = createNode(d, 1);
 
         // Insertion de clés
         QueryPerformanceCounter(&start);
-        for (int i = 0; i < n; i++) {
+        for ( i = 0; i < n; i++) {
             insert(&root, i, d);
         }
         QueryPerformanceCounter(&end);
