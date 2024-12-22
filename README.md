@@ -14,10 +14,12 @@ Ce dépôt contient des implémentations et des exemples de divers algorithmes e
 ## **Aperçu du Projet**
 
 Ce projet inclut :
-- **Algorithmes de tri basés sur les tas** : Analyse et implémentation du tri par tas.
+
 - **Arbres Binaires de Recherche (Binary Search Tree)** : Implémentation des arbres binaires pour des opérations de recherche efficaces.
 - **Arbres B (B-Tree)** : Gestion des structures avancées pour des systèmes de bases de données et de fichiers.
 - **Listes Doublement Chaînées** : Gestion et parcours de listes chaînées efficacement.
+- **TAS** : Implémentation des operation de insertion, rechrche et suppression sur la structure de données TAS.
+- **Algorithmes de tri basés sur les tas** : Analyse et implémentation du tri par tas.
 
 ---
 
