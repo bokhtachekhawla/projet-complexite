@@ -70,7 +70,7 @@ bool verifier_partitions(int S[], int taille_S, int S1[], int taille_S1, int S2[
     return true; // Toutes les conditions sont satisfaites
 }
 
-// Exemple d'utilisation dans la fonction principale
+// Exemple
 int main() {
     // Ensemble principal
     int S[] = {1, 5, 11, 5};
