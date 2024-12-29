@@ -19,7 +19,7 @@ bool verifier_intersection(int S1[], int taille_S1, int S2[], int taille_S2) {
     int i,j;
     for ( i = 0; i < taille_S1; i++) {
         for ( j = 0; j < taille_S2; j++) {
-            if (S1[i] == S2[j]) {
+            if (S1[i]  == S2[j]) {
                 return false; // Si un élément commun est trouvé
             }
         }
