@@ -4,8 +4,8 @@
 
 // Fonction pour calculer la somme d'un tableau
 int sumArray(int nums[], int size) {
-    int sum = 0;
-    for (int i = 0; i < size; i++) {
+    int sum = 0,i;
+    for ( i = 0; i < size; i++) {
         sum += nums[i];
     }
     return sum;

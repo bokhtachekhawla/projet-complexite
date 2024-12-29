@@ -3,8 +3,8 @@
 
 // Fonction pour calculer la somme des éléments d'un tableau
 int somme(int tableau[], int taille) {
-    int total = 0;
-    for (int i = 0; i < taille; i++) {
+    int total = 0,i;
+    for ( i = 0; i < taille; i++) {
         total += tableau[i];
     }
     return total;
@@ -12,8 +12,9 @@ int somme(int tableau[], int taille) {
 
 // Fonction pour vérifier si deux ensembles sont disjoints
 bool verifier_intersection(int S1[], int taille_S1, int S2[], int taille_S2) {
-    for (int i = 0; i < taille_S1; i++) {
-        for (int j = 0; j < taille_S2; j++) {
+    int i,j;
+    for ( i = 0; i < taille_S1; i++) {
+        for ( j = 0; j < taille_S2; j++) {
             if (S1[i] == S2[j]) {
                 return false; // Si un élément commun est trouvé
             }
@@ -24,25 +25,25 @@ bool verifier_intersection(int S1[], int taille_S1, int S2[], int taille_S2) {
 
 // Fonction pour vérifier si l'union de S1 et S2 correspond à S
 bool verifier_union(int S[], int taille_S, int S1[], int taille_S1, int S2[], int taille_S2) {
-    int marqueurs[100] = {0}; // Tableau de comptage (assume des valeurs ≤ 100)
+    int marqueurs[100] = {0} , i; // Tableau de comptage (assume des valeurs ≤ 100)
 
     // Marquer les éléments de S
-    for (int i = 0; i < taille_S; i++) {
+    for ( i = 0; i < taille_S; i++) {
         marqueurs[S[i]]++;
     }
 
     // Soustraire les éléments de S1
-    for (int i = 0; i < taille_S1; i++) {
+    for ( i = 0; i < taille_S1; i++) {
         marqueurs[S1[i]]--;
     }
 
     // Soustraire les éléments de S2
-    for (int i = 0; i < taille_S2; i++) {
+    for ( i = 0; i < taille_S2; i++) {
         marqueurs[S2[i]]--;
     }
 
     // Vérifier si tous les marqueurs sont à zéro
-    for (int i = 0; i < 100; i++) {
+    for ( i = 0; i < 100; i++) {
         if (marqueurs[i] != 0) {
             return false;
         }
